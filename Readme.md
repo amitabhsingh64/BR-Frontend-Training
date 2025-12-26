@@ -16,7 +16,7 @@ I covered essentials of local and remote development environments.
 ### Phase 2: Full-Stack Web Development(Current)
 A deep dive into Full-Stack web development:
 * **Html, CSS:** Implementing automated workflows.
-* **CI/CD Pipelines:** Understanding Continuous Integration and Continuous Deployment.
+* **JS:** Js features and implementation. 
 
 ---
 
