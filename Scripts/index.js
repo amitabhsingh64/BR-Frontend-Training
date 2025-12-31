@@ -52,7 +52,7 @@ function renderTable(data) {
         if (Array.isArray(emp.departments)) {
             emp.departments.forEach(dep => {
                 const badge = document.createElement("span");
-                badge.className = "badge badge-custom"; // Your custom class
+                badge.className = "badge badge-custom"; // custom class
                 badge.textContent = dep;
                 deptCell.appendChild(badge);
             });
