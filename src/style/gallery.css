@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+#landing {
+  z-index: 1;
+}
+
+#homeVideo {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+#bg_img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  height: 10vh;
+  width: 100vw;
+  font-weight: 500;
+}
+
+#options {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 10vw;
+  text-decoration: none;
+}
+
+#header_logo {
+  cursor: pointer;
+  color: white;
+  fill: white;
+  display: flex;
+  align-self: flex-start;
+  height: 5vh;
+  width: 10vw;
+}
+
+#aboutDLC {
+  align-self: flex-end;
+  text-shadow: 1px 1px black;
+  color: white;
+  text-decoration: none;
+}
+
+#ourWorlds {
+  align-self: flex-end;
+  text-shadow: 1px 1px black;
+  color: white;
+  text-decoration: none;
+}
+
+#gallery {
+  align-self: flex-end;
+  text-shadow: 1px 1px black;
+  color: white;
+  text-decoration: none;
+}
+
+#centerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  height: 120vh;
+  width: 100vw;
+  background-color: rgb(21, 21, 21);
+}
+
+.cards_img {
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+
+.cards_landscapes_img {
+  display: flex;
+  flex: 1;
+  object-fit: cover;
+}
+
+.cards_text {
+  margin-top: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: x-large;
+  font-weight: 500;
+  color: white;
+}
+
+#cards_landscapes {
+  height: 50%;
+  width: 33%;
+}
+
+#cards_golf {
+  height: 50%;
+  width: 33%;
+}
+
+#cards_wellness {
+  height: 50%;
+  width: 33%;
+}
+
+#cards_outdoor {
+  height: 50%;
+  width: 33%;
+}
+
+#cards_clubhouses {
+  height: 50%;
+  width: 33%;
+}
+
+#cards_lifestyle {
+  height: 50%;
+  width: 33%;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+  color: white;
+}
+
+#footer_upper {
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  margin: 5px;
+}
+
+#getInTouch {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20%;
+  margin-top: 15vh;
+  background-color: black;
+  color: white;
+}
+
+#footer_logo_mark {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 35%;
+  background-color: black;
+  margin-top: 15vh;
+  margin-left: 5vh;
+}
+
+#heading_1 {
+  color: rgb(154, 154, 154);
+  justify-content: center;
+  align-self: flex-start;
+  margin-bottom: 1vh;
+  font-weight: 500;
+
+}
+
+#number {
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 1.25em;
+  margin-bottom: 1vh;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#realEstate {
+  color: rgb(154, 154, 154);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  background-color: black;
+  font-weight: 500;
+}
+
+#email {
+  margin-top: 2vh;
+  text-decoration: underline;
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20%;
+  margin-top: 15vh;
+  padding-left: 10vh;
+  background-color: black;
+  color: white;
+}
+
+#secondLastColumn_about {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn_ourWorlds {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn_realEstate {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn_exp {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn_gallery {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#footer_lower {
+  color: rgb(154, 154, 154);
+  font-size: 1.25em;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer_lower_left {
+  display: flex;
+  margin-left: 5%;
+}
+
+#footer_lower_right {
+  display: flex;
+  margin-right: 5%;
+}
+
+/* --- UPDATE FOR MOBILE (Max width 768px) --- */
+@media screen and (max-width: 768px) {
+
+  #header {
+    position: fixed;
+    /* Keeps it stuck to the top */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+
+    /* Layout adjustments */
+    flex-direction: column;
+    height: auto;
+    background-color: black;
+    /* Solid black is required so content doesn't show through */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+  }
+
+  /* Push the video down so it isn't hidden behind the header */
+  #homeVideo {
+    /* Approximate height of your stacked header (Logo + Menu) */
+    margin-top: 140px;
+  }
+}
+
+/* --- MOBILE STACKING FIX (Max width 768px) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Allow the container to grow tall enough for stacked cards */
+    #cards {
+        height: auto !important; /* Overrides the fixed 120vh */
+        flex-direction: column;  /* Forces vertical stacking */
+        padding-bottom: 50px;
+    }
+
+    /* 2. Force every specific card ID to be full width */
+    #cards_landscapes, 
+    #cards_golf, 
+    #cards_wellness, 
+    #cards_outdoor, 
+    #cards_clubhouses, 
+    #cards_lifestyle {
+        width: 100% !important;  /* Forces full width */
+        height: auto;            /* Lets height adapt to content */
+        margin-bottom: 30px;     /* Adds space between the stacked cards */
+        padding: 0 20px;         /* Adds padding so they don't touch screen edges */
+    }
+
+    /* 3. Adjust image height for mobile */
+    .cards_img {
+        height: 300px;           /* Sets a nice fixed height for images */
+        width: 100%;
+    }
+}

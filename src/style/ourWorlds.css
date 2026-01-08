@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  font-family: sans-serif;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  height: 10vh;
+  width: 100vw;
+  font-weight: 500;
+}
+
+#options {
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 10vw;
+  text-decoration: none;
+}
+
+#header_logo {
+  cursor: pointer;
+  color: white;
+  fill: white;
+  display: flex;
+  align-self: flex-start;
+  height: 4vh;
+  width: 10vw;
+}
+
+#aboutDLC {
+  align-self: flex-end;
+  text-shadow: 1px 1px black;
+  text-decoration: none;
+}
+
+#ourWorlds {
+  align-self: flex-end;
+  text-shadow: 1px 1px black;
+  text-decoration: none;
+}
+
+#gallery {
+  align-self: flex-end;
+  text-shadow: 1px 1px black;
+  text-decoration: none;
+}
+
+
+#img_holder {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  overflow: hidden;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh;
+  width: 21vw;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.img_card {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+
+.card_heading {
+  display: flex;
+  margin-top: 1vh;
+  height: 2.5vh;
+  text-transform: uppercase;
+}
+
+.card_text {
+  text-transform: capitalize;
+  display: flex;
+  color: rgb(154, 154, 154);
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+  color: white;
+}
+
+#footer_upper {
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  margin: 5px;
+}
+
+#getInTouch {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20%;
+  margin-top: 15vh;
+  background-color: black;
+  color: white;
+}
+
+#footer_logo_mark {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 35%;
+  background-color: black;
+  margin-top: 15vh;
+  margin-left: 5vh;
+}
+
+#heading_1 {
+  color: rgb(154, 154, 154);
+  justify-content: center;
+  align-self: flex-start;
+  margin-bottom: 1vh;
+  font-weight: 500;
+
+}
+
+#number {
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 1.25em;
+  margin-bottom: 1vh;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#realEstate {
+  color: rgb(154, 154, 154);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  background-color: black;
+  font-weight: 500;
+}
+
+#email {
+  margin-top: 2vh;
+  text-decoration: underline;
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20%;
+  margin-top: 15vh;
+  padding-left: 10vh;
+  background-color: black;
+  color: white;
+}
+
+#secondLastColumn_about {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn_ourWorlds {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn_realEstate {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn_exp {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#secondLastColumn_gallery {
+  margin-bottom: 1vh;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+#footer_lower {
+  color: rgb(154, 154, 154);
+  font-size: 1.25em;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer_lower_left {
+  display: flex;
+  margin-left: 5%;
+}
+
+#footer_lower_right {
+  display: flex;
+  margin-right: 5%;
+}
+
+
+/* --- 1. GLOBAL FIX (Desktop & iPad Pro) --- */
+/* We switch margins to % so they are consistent regardless of screen height */
+.card {
+  width: 22%;
+  /* 4 cards * 22% = 88% */
+  margin: 2vh 1.5%;
+  /* 8 margins * 1.5% = 12%. Total = 100% width filled perfectly */
+  height: 40vh;
+  /* Keep your original height */
+}
+
+/* Ensure the container centers the content properly */
+#img_holder {
+  justify-content: flex-start;
+  /* Ensures the grid stays centered */
+  gap: 0;
+  /* We are using margins on cards, so gap isn't needed */
+}
+
+
+/* --- 2. TABLET (Max width 900px) --- */
+/* This triggers only on screens SMALLER than an iPad Pro (portrait) */
+@media screen and (max-width: 900px) {
+  .card {
+    width: 44%;
+    /* 2 cards per row */
+    margin: 2vh 3%;
+    /* Adjust margins to center them */
+  }
+
+  #options {
+    width: 90vw;
+    /* Give navigation more space */
+    font-size: 0.9em;
+  }
+}
+
+
+/* --- 3. MOBILE (Max width 600px) --- */
+@media screen and (max-width: 600px) {
+
+  /* Stack Header */
+  #header {
+    position: relative;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  #header_logo {
+    width: 40vw;
+    /* Make logo visible */
+    margin-bottom: 20px;
+  }
+
+  #options {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Stack Cards (1 per row) */
+  #img_holder {
+    margin-top: 30px;
+  }
+
+  .card {
+    width: 90vw;
+    /* Full width */
+    margin: 0 auto 30px auto;
+    /* Center it */
+    height: auto;
+    /* Let height grow with image/text */
+  }
+
+  .img_card {
+    height: 35vh;
+    /* Taller images for mobile */
+    object-fit: cover;
+  }
+
+  /* Stack Footer */
+  #footer {
+    height: auto;
+  }
+
+  #footer_upper,
+  #footer_lower {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #footer_upper>div {
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+
+  #footer_lower {
+    gap: 15px;
+    padding-bottom: 30px;
+  }
+
+  #footer_lower_left,
+  #footer_lower_right {
+    margin: 0;
+    justify-content: center;
+  }
+}
