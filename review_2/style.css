@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'Pixel Game';
+  src: url('pixel-game/Pixel Game.otf') format('opentype');
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  font-family: 'Pixel Game', sans-serif;
+}
+#main-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #FA5C5C;
+}
+
+#box-screen{
+    display: flex;
+    height: 70%;
+    width: 80%;
+    background-color:#FD8A6B;
+    flex-direction: column;
+    border-radius: 25px;
+}
+
+#title{
+    width: 100%;
+    height: 15%;
+    background-color: blanchedalmond;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 300;
+    color: #FA5C5C;
+    text-shadow: 1px 1px 1px black, 3px 3px 5px #FD8A6B;
+    border-radius: 25px;
+}
+
+#rules{
+    margin-top: 1vh;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    color:#FBEF76;
+    text-shadow: 1px 1px 1px black, 3px 3px 5px rgb(121, 21, 21);
+}
+
+#number{
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4em;
+    overflow: hidden;
+    color: #FBEF76;
+    text-shadow: 1px 1px 1px black, 3px 3px 5px rgb(121, 21, 21);
+}
+
+#input-row{
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+#error{
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    color: red;
+    text-shadow: 1px 1px 1px black, 3px 3px 5px black;
+}
+#btn_submit{
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+#check{
+    font-size: 1.5em;
+    background-color: green;
+    border-radius: 25px;
+    width: 10vw;
+    height: 5vh;
+    color:white;
+
+}
+
+#check:hover{
+    background-color:greenyellow;
+    width: 12vw;
+    height: 7vh;
+    color:green;
+}
+
+#reset{
+    font-size: 1.5em;
+    background-color: rgb(122, 196, 12);
+    color: white;
+    border-radius: 25px;
+    width: 10vw;
+    height: 5vh;
+}
+
+#reset:hover{
+    background-color: greenyellow;
+    color: green;
+    width: 12vw;
+    height: 7vh;
+}
+
+#result{
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    color:#FBEF76;
+    text-shadow: 1px 1px 1px black, 3px 3px 5px red;
+}
+
+#num_input{
+    background-color: #FBEF76;
+    height: 50%;
+    font-size: 1.5em;
+    overflow: hidden;
+    color: #FA5C5C;
+    text-align: center;
+    border-radius: 25px;
+}
