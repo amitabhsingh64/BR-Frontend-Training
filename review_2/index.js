@@ -23,11 +23,13 @@ function restart() {
 
 function inputValidation() {
   if (input_field.value) {
+    const err = document.getElementById("error");
     let num_parse = parseInt(input_field.value, 10);
     if (num_parse > 10 || num_parse < 1) {
-      const err = document.getElementById("error");
       err.innerHTML = `Invalid input ${num_parse}`;
       input_field.value = ` `;
+    }else{
+      err.innerHTML = ` `;
     }
   }
 }
