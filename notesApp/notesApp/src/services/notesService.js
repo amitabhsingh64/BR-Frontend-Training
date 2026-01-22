@@ -2,10 +2,6 @@ import axios from 'axios';
 
 // endpoint
 const BASE_URL = "http://localhost:3001/notes";
-
-/**
- * Fetch all notes from the database.
- */
 export const getNotes = async () => {
     try {
         const response = await axios.get(BASE_URL);
