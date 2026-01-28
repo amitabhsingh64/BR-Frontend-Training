@@ -1,16 +1,56 @@
-# React + Vite
+# NotesApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based notes application built with Vite, designed to manage and organize notes efficiently. This project demonstrates the use of modern web development tools and libraries.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend
+- **React**: For building the user interface.
+- **React Router**: For managing navigation and routing.
+- **Material-UI (MUI)**: For pre-styled components and icons.
+- **Axios**: For making HTTP requests.
+- **UUID**: For generating unique identifiers.
 
-## React Compiler
+### Backend
+- **JSON Server**: Used as a mock backend to simulate RESTful APIs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Development Tools
+- **Vite**: A fast build tool for modern web projects.
+- **ESLint**: For maintaining code quality and consistency.
 
-## Expanding the ESLint configuration
+## Features
+- User authentication with protected routes.
+- CRUD operations for notes.
+- Archive and trash functionality.
+- Responsive design using Material-UI.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Lessons Learned
+- **React Router**: Implementing protected and authenticated routes.
+- **State Management**: Managing state effectively across components.
+- **Axios**: Handling API requests and responses.
+- **Material-UI**: Customizing pre-built components for a consistent design.
+- **JSON Server**: Setting up a mock backend for development and testing.
+
+## How to Run
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the JSON server:
+   ```bash
+   npx json-server --watch db.json --port 3000
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open the app in your browser at `http://localhost:5173`.
+
+## Future Scope
+- Add TypeScript for type safety.
+- Implement a real backend with authentication.
+- Enhance the UI with more animations and transitions.
+
+## Acknowledgments
+This project was bootstrapped with Vite and inspired by modern note-taking applications.
