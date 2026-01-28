@@ -1,11 +1,10 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
+import { isAuthenticated, redirectToDashboard } from '../services/authService';
 
 const AuthRoute = ({ children }) => {
-  const user = localStorage.getItem("user");
-
-  if (user) {
-    return <Navigate to="/dashboard" replace />;
+  if (isAuthenticated()) {
+    return <Navigate to={redirectToDashboard()} replace />;
   }
   return children;
 };

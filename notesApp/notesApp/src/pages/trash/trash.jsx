@@ -4,6 +4,7 @@ import { Box, Grid, CircularProgress, Typography } from "@mui/material";
 import Header from "../../components/headerComponent/headerComponent";
 import Sidebar from "../../components/sideBar/sideBar";
 import NoteCard from "../../components/noteCard/noteCard"; 
+import { getNotes } from "../../services/notesService";
 
 const drawerWidth = 240; 
 
@@ -19,22 +20,19 @@ const Trash = () => {
 
   useEffect(() => {
     const fetchTrashNotes = async () => {
-        try {
-            const user = JSON.parse(localStorage.getItem("user"));
-            const userId = user ? user.id : null;
-
-            const response = await axios.get("http://localhost:3000/notes");
-            
-            const trashNotes = response.data.filter(note => 
-                note.userId === userId && note.isTrash === true
-            );
-            
-            setNotesList(trashNotes.reverse()); 
-            setLoading(false);
-        } catch (error) {
-            console.error("Error fetching trash notes:", error);
-            setLoading(false);
-        }
+      try {
+        const user = JSON.parse(localStorage.getItem("user"));
+        const userId = user ? user.id : null;
+        const allNotes = await getNotes();
+        const trashNotes = allNotes.filter(note => 
+          note.userId === userId && note.isTrash === true
+        );
+        setNotesList(trashNotes.reverse());
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching trash notes:", error);
+        setLoading(false);
+      }
     };
 
     fetchTrashNotes();

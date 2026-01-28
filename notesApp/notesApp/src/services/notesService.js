@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // endpoint
-const BASE_URL = "http://localhost:3001/notes";
+const BASE_URL = "http://localhost:3000/notes";
 export const getNotes = async () => {
     try {
         const response = await axios.get(BASE_URL);

@@ -4,6 +4,7 @@ import { Box, Grid, CircularProgress, Typography } from "@mui/material";
 import Header from "../../components/headerComponent/headerComponent";
 import Sidebar from "../../components/sideBar/sideBar";
 import NoteCard from "../../components/noteCard/noteCard"; 
+import { getNotes } from "../../services/notesService";
 
 const drawerWidth = 240; 
 
@@ -19,28 +20,22 @@ const Archive = () => {
 
   useEffect(() => {
     const fetchArchivedNotes = async () => {
-        try {
-            const user = JSON.parse(localStorage.getItem("user"));
-            const userId = user ? user.id : null;
-            const response = await axios.get("http://localhost:3000/notes");
-            const allNotes = response.data;
-            const archivedNotes = allNotes.filter(note => {
-                const isUserMatch = note.userId === userId;
-                const isArchiveTrue = note.isArchive === true;
-                const isTrashFalse = note.isTrash === false;
-                if (isUserMatch && (!isArchiveTrue || !isTrashFalse)) {
-                   console.log(`Note ID ${note.id} ignored. isArchive: ${note.isArchive}, isTrash: ${note.isTrash}`);
-                }
-
-                return isUserMatch && isArchiveTrue && isTrashFalse;
-            });
-
-            setNotesList(archivedNotes.reverse()); 
-            setLoading(false);
-        } catch (error) {
-            console.error("Error fetching archived notes:", error);
-            setLoading(false);
-        }
+      try {
+        const user = JSON.parse(localStorage.getItem("user"));
+        const userId = user ? user.id : null;
+        const allNotes = await getNotes();
+        const archivedNotes = allNotes.filter(note => {
+          const isUserMatch = note.userId === userId;
+          const isArchiveTrue = note.isArchive === true;
+          const isTrashFalse = note.isTrash === false;
+          return isUserMatch && isArchiveTrue && isTrashFalse;
+        });
+        setNotesList(archivedNotes.reverse());
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching archived notes:", error);
+        setLoading(false);
+      }
     };
 
     fetchArchivedNotes();

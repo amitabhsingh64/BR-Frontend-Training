@@ -6,6 +6,7 @@ import Sidebar from "../../components/sideBar/sideBar";
 import { Outlet } from "react-router-dom";
 import AddNotesBlock from "../../components/addNotesBlock/addNotesBlock";
 import NoteCard from "../../components/noteCard/noteCard"; 
+import { getNotes } from "../../services/notesService";
 
 const drawerWidth = 240; 
 
@@ -21,23 +22,21 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchNotes = async () => {
-        try {
-            const user = JSON.parse(localStorage.getItem("user"));
-            const userId = user ? user.id : null;
-
-            const response = await axios.get("http://localhost:3000/notes");
-            const myNotes = response.data.filter(note => 
-                note.userId === userId && 
-                note.isTrash !== true && 
-                note.isArchive !== true
-            );
-            
-            setNotesList(myNotes.reverse()); 
-            setLoading(false);
-        } catch (error) {
-            console.error("Error fetching notes:", error);
-            setLoading(false);
-        }
+      try {
+        const user = JSON.parse(localStorage.getItem("user"));
+        const userId = user ? user.id : null;
+        const allNotes = await getNotes();
+        const myNotes = allNotes.filter(note => 
+          note.userId === userId && 
+          note.isTrash !== true && 
+          note.isArchive !== true
+        );
+        setNotesList(myNotes.reverse());
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching notes:", error);
+        setLoading(false);
+      }
     };
 
     fetchNotes();
